@@ -1,0 +1,44 @@
+﻿<Properties StartupConfiguration="{0499B014-A786-4057-A254-FFAEACD68C05}|Default">
+  <MonoDevelop.Ide.ItemProperties.DiaryApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1F807962-7338-4F31-B8F9-0AEE69556543" />
+  <MonoDevelop.Ide.ItemProperties.DiaryApp.Android AndroidDesignerPreferredTheme="MainTheme" PreferredExecutionTarget="Android.Lenovo_Tab_-_j606L_API_30" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DiaryApp/ViewModel/LoginPageViewModel.cs">
+    <Files>
+      <File FileName="DiaryApp/View/LoginPage.xaml" Line="17" Column="1" />
+      <File FileName="DiaryApp/ViewModel/LoginPageViewModel.cs" Line="72" Column="1" />
+      <File FileName="DiaryApp/ViewModel/HomePageViewModel.cs" />
+      <File FileName="DiaryApp/View/HomePage.xaml" />
+      <File FileName="DiaryApp/View/NewNotePage.xaml" />
+      <File FileName="DiaryApp/ViewModel/NewNotePageViewModel.cs" />
+      <File FileName="DiaryApp/Services/DiaryRepository.cs" />
+      <File FileName="DiaryApp/ViewModel/ViewModelBase.cs" />
+      <File FileName="DiaryApp/Helper/AppTitle.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DiaryApp" expanded="True">
+            <Node name="DiaryApp" expanded="True">
+              <Node name="Helper" expanded="True" />
+              <Node name="View" expanded="True" />
+              <Node name="ViewModel" expanded="True">
+                <Node name="LoginPageViewModel.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="DiaryApp.Android" expanded="True" />
+            <Node name="DiaryApp.iOS" expanded="True">
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/anirban/Desktop/xf/DiaryApp/DiaryApp.Android/Extensions/DocumentReferenceExtensions.cs" relfile="DiaryApp.Android/Extensions/DocumentReferenceExtensions.cs" line="13" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
