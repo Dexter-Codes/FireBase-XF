@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DiaryApp.View.LoginPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand"
+                     VerticalOptions="CenterAndExpand"
+                     Margin="20,20">
+            <!--Email based login-->
+            <!--<Entry Text="{Binding Email}" HorizontalOptions="FillAndExpand" Placeholder="Email"/>
+            <Entry Text="{Binding Password}" HorizontalOptions="FillAndExpand" Placeholder="Password" IsPassword="True"/>-->
+            <Button Margin="0,20" Text="Login" TextColor="WhiteSmoke" BackgroundColor="MidnightBlue" Command="{Binding LoginCommand}" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

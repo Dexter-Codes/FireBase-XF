@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DiaryApp.View.NewNotePage"
+    Title="Add New Note"
+    NavigationPage.HasBackButton="True">
+    <ContentPage.Content>
+        <StackLayout Margin="20,20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Entry Placeholder="Title"  ReturnType="Next" IsEnabled="{Binding IsEditable}" Text="{Binding Title}" Margin="0,10"/>
+            <Frame BorderColor="LightGray">
+            <Editor  Placeholder="Notes" HeightRequest="250" IsEnabled="{Binding IsEditable}" Text="{Binding Notes}"/>
+            </Frame>
+            <Button Text="{Binding ButtonTitle}"
+                    Margin="0,10"
+                    Command="{Binding SaveCommand}"
+                    BackgroundColor="LightGreen"
+                    HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

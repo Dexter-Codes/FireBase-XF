@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    x:Class="DiaryApp.View.HomePage"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    NavigationPage.HasBackButton="False"
+    Title="HomePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem  IconImageSource="logout" Priority="0" Order="Primary" Command="{Binding SignoutCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+
+        <CollectionView
+            x:Name="Item"
+            Margin="20,10"
+            AbsoluteLayout.LayoutBounds="1,1,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            SelectedItem="None"
+            SelectionMode="None"
+            ItemsSource="{Binding DiariesList}"
+            EmptyView="No Diaries yet.">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                        <Frame>
+                       <Grid Margin="2" ColumnDefinitions="*,0.2*">
+                        <StackLayout Grid.Column="0">
+                            <Label Text="{Binding Title}" />
+                            <Label Text="{Binding NotesEntered}" MaxLines="5"/>
+                            <StackLayout Orientation="Horizontal" >
+                                <ImageButton BackgroundColor="Transparent" Source="edit" HorizontalOptions="StartAndExpand"
+                                        CommandParameter="{Binding .}"
+                                        Command="{Binding BindingContext.EditCommand,Source={x:Reference Name=Item}}" />
+                                <ImageButton BackgroundColor="Transparent" Source="delete" HorizontalOptions="CenterAndExpand"
+                                        CommandParameter="{Binding .}"
+                                        Command="{Binding BindingContext.DeleteCommand,Source={x:Reference Name=Item}}"/>
+                            </StackLayout>
+                        </StackLayout>
+                            <ImageButton Grid.Column="1"
+                                BackgroundColor="Transparent"
+                                Source="next" CommandParameter="{Binding .}"
+                                Command="{Binding BindingContext.ViewCommand,Source={x:Reference Name=Item}}"/>
+                            </Grid>
+                            </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+            <ActivityIndicator AbsoluteLayout.LayoutBounds="0.5,0.5,20,20"
+                               AbsoluteLayout.LayoutFlags="PositionProportional"
+                IsRunning="{Binding IsLoading}" />
+
+            <ImageButton  AbsoluteLayout.LayoutBounds="0.8,0.8,80,80"
+                     AbsoluteLayout.LayoutFlags="PositionProportional"
+                     BackgroundColor="Transparent"
+                     Source="add" Command="{Binding AddNewDiaryCommand}"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
